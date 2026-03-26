@@ -17,6 +17,7 @@ import ReportsPage from '@/pages/ReportsPage';
 import CreditsPage from '@/pages/CreditsPage';
 import ProfilePage from '@/pages/ProfilePage';
 import TerminalPage from '@/pages/TerminalPage';
+import CardsPage from '@/pages/CardsPage';
 import Icon from '@/components/ui/icon';
 
 // Suppress unused import warning
@@ -80,6 +81,7 @@ export default function App() {
     queue: 'Электронная очередь',
     clients: 'Клиентская база',
     accounts: 'Учёт счетов',
+    cards: 'Выпуск карт',
     history: 'История операций',
     reports: 'Отчёты и аналитика',
     credits: 'Кредит / Рассрочка',
@@ -177,6 +179,14 @@ export default function App() {
             <AccountsPage
               accounts={accounts}
               clients={clients}
+              onAccountCreated={handleAccountCreated}
+            />
+          )}
+          {section === 'cards' && (
+            <CardsPage
+              clients={clients}
+              accounts={accounts}
+              employee={employee}
               onAccountCreated={handleAccountCreated}
             />
           )}

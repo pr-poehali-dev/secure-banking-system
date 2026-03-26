@@ -111,6 +111,7 @@ export type AppSection =
   | 'queue'
   | 'clients'
   | 'accounts'
+  | 'cards'
   | 'history'
   | 'reports'
   | 'credits'
